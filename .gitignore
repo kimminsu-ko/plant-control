@@ -1,4 +1,4 @@
-# Python
+﻿# Python
 __pycache__/
 *.py[cod]
 *$py.class
@@ -25,3 +25,7 @@ wheels/
 
 # PyCharm
 .idea/
+
+# Environment files
+**/.env
+**/.env.docker

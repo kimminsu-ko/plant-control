@@ -1,7 +1,12 @@
-﻿import requests
+﻿import os
+
+import requests
 
 
-SERVER_URL = "http://server-app:5000/api/v1/edge/events"
+SERVER_URL = os.getenv(
+    "SERVER_URL",
+    "http://127.0.0.1:5000/api/v1/edge/events",
+)
 
 
 def send_event(event: dict) -> None:

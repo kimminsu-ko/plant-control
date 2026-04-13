@@ -4,11 +4,15 @@ services:
   server-app:
     build: ./server-app
     container_name: server-app
+    env_file:
+      - ./server-app/.env.docker
     ports:
       - "5000:5000"
 
   edge-app:
     build: ./edge-app
     container_name: edge-app
+    env_file:
+      - ./edge-app/.env.docker
     depends_on:
       - server-app
