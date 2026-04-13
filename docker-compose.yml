@@ -1,0 +1,14 @@
+﻿version: "3.9"
+
+services:
+  server-app:
+    build: ./server-app
+    container_name: server-app
+    ports:
+      - "5000:5000"
+
+  edge-app:
+    build: ./edge-app
+    container_name: edge-app
+    depends_on:
+      - server-app
